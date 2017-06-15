@@ -1,7 +1,7 @@
 <ng-template #modalContent let-close="close">
   <div class="modal-header">
     <h5 class="modal-title">Event action occurred</h5>
-    <button type="button" class="close" (click)="close()">
+    <button type="button" class="close" (tap)="close()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" (click)="close()">OK</button>
+    <button type="button" class="btn btn-secondary" (tap)="close()">OK</button>
   </div>
 </ng-template>
 
@@ -52,19 +52,19 @@
     <div class="btn-group">
       <div
         class="btn btn-primary"
-        (click)="view = 'month'"
+        (tap)="view = 'month'"
         [class.active]="view === 'month'">
         Month
       </div>
       <div
         class="btn btn-primary"
-        (click)="view = 'week'"
+        (tap)="view = 'week'"
         [class.active]="view === 'week'">
         Week
       </div>
       <div
         class="btn btn-primary"
-        (click)="view = 'day'"
+        (tap)="view = 'day'"
         [class.active]="view === 'day'">
         Day
       </div>
@@ -107,7 +107,7 @@
   Edit events
   <button
     class="btn btn-primary pull-right"
-    (click)="addEvent()">
+    (tap)="addEvent()">
     Add new
   </button>
   <div class="clearfix"></div>
@@ -164,7 +164,7 @@
       <td>
         <button
           class="btn btn-danger"
-          (click)="events.splice(index, 1); refresh.next()">
+          (tap)="events.splice(index, 1); refresh.next()">
           Delete
         </button>
       </td>

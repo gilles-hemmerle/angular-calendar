@@ -40,7 +40,7 @@ import {
             (ngModelChange)="updateDate()"
             ngbDatepicker
             #datePicker="ngbDatepicker">
-            <div class="input-group-addon" (click)="datePicker.toggle()" >
+            <div class="input-group-addon" (tap)="datePicker.toggle()" >
               <i class="fa fa-calendar"></i>
             </div>
         </div>

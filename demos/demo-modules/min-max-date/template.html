@@ -1,13 +1,13 @@
 <div class="row text-center">
   <div class="col-md-4">
     <div class="btn-group">
-      <button class="btn btn-primary" (click)="decrement()" [disabled]="prevBtnDisabled">
+      <button class="btn btn-primary" (tap)="decrement()" [disabled]="prevBtnDisabled">
         Previous
       </button>
-      <button class="btn btn-secondary" (click)="today()">
+      <button class="btn btn-secondary" (tap)="today()">
         Today
       </button>
-      <button class="btn btn-primary" (click)="increment()" [disabled]="nextBtnDisabled">
+      <button class="btn btn-primary" (tap)="increment()" [disabled]="nextBtnDisabled">
         Next
       </button>
     </div>
@@ -17,9 +17,9 @@
   </div>
   <div class="col-md-4">
     <div class="btn-group">
-      <div class="btn btn-primary" (click)="changeView('month')" [class.active]="view === 'month'">Month</div>
-      <div class="btn btn-primary" (click)="changeView('week')" [class.active]="view === 'week'">Week</div>
-      <div class="btn btn-primary" (click)="changeView('day')" [class.active]="view === 'day'">Day</div>
+      <div class="btn btn-primary" (tap)="changeView('month')" [class.active]="view === 'month'">Month</div>
+      <div class="btn btn-primary" (tap)="changeView('week')" [class.active]="view === 'week'">Week</div>
+      <div class="btn btn-primary" (tap)="changeView('day')" [class.active]="view === 'day'">Day</div>
     </div>
   </div>
 </div>

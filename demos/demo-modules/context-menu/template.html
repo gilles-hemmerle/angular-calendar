@@ -34,7 +34,7 @@
         (mouseleave)="unhighlightDay.emit({event: event})"
         [mwlCalendarTooltip]="event.title | calendarEventTitle:'monthTooltip':event"
         [tooltipPlacement]="tooltipPlacement"
-        (click)="$event.stopPropagation(); eventClicked.emit({event: event})">
+        (tap)="$event.stopPropagation(); eventClicked.emit({event: event})">
       </div>
     </div>
   </div>
@@ -50,7 +50,7 @@
       [class.cal-future]="day.isFuture"
       [class.cal-weekend]="day.isWeekend"
       [class.cal-drag-over]="day.dragOver"
-      (click)="dayClicked.emit({date: day.date})"
+      (tap)="dayClicked.emit({date: day.date})"
       [contextMenu]="basicMenu"
       [contextMenuSubject]="day.date">
       <b>{{ day.date | calendarDate:'weekViewColumnHeader':locale }}</b><br>

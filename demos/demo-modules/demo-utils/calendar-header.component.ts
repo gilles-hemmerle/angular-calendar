@@ -38,19 +38,19 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
         <div class="btn-group">
           <div
             class="btn btn-primary"
-            (click)="viewChange.emit('month')"
+            (tap)="viewChange.emit('month')"
             [class.active]="view === 'month'">
             Month
           </div>
           <div
             class="btn btn-primary"
-            (click)="viewChange.emit('week')"
+            (tap)="viewChange.emit('week')"
             [class.active]="view === 'week'">
             Week
           </div>
           <div
             class="btn btn-primary"
-            (click)="viewChange.emit('day')"
+            (tap)="viewChange.emit('day')"
             [class.active]="view === 'day'">
             Day
           </div>
